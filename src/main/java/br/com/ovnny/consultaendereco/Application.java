@@ -8,13 +8,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-@SpringBootApplication
-@EnableWebMvc
 @ComponentScan(
         basePackages = "br.com.ovnny.consultaendereco",
         basePackageClasses = { ConsultaEnderecoController.class, NotFoundException.class, CustomMessageError.class },
         lazyInit = true
 )
+@EnableWebMvc
+@SpringBootApplication
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

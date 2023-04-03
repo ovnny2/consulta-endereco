@@ -32,7 +32,7 @@ public class ConsultaCepControllerAdvice {
     @ExceptionHandler(NotFoundException.class)
     public ResponseEntity<ErrorMessage> handleNotFoundException(NotFoundException ex) {
         var status = ex.getHttpStatus().value();
-        var message = new ErrorMessage(ex.getMessage().toString(), status);
+        var message = new ErrorMessage(ex.getMessage(), status);
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
     }
 }

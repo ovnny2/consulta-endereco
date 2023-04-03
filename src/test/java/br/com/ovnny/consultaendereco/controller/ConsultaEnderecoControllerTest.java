@@ -82,7 +82,6 @@ class ConsultaEnderecoControllerTest {
         Set<ConstraintViolation<CepRequest>> violations = validator.validate(request);
         ConstraintViolation<CepRequest> violation = violations.iterator().next();
 
-
         assertEquals(1, violations.size());
         assertEquals("Cep Inválido. Verifique os dados de entrada e tente novamente. Ex: 12345-678", violation.getMessage());
         assertEquals("cep", violation.getPropertyPath().toString());
@@ -111,7 +110,6 @@ class ConsultaEnderecoControllerTest {
         Set<ConstraintViolation<CepRequest>> violations = validator.validate(request);
         ConstraintViolation<CepRequest> violation = violations.iterator().next();
 
-
         assertEquals(1, violations.size());
         assertEquals("O cep é obrigatório", violation.getMessage());
         assertEquals("cep", violation.getPropertyPath().toString());
@@ -125,12 +123,9 @@ class ConsultaEnderecoControllerTest {
         Set<ConstraintViolation<CepRequest>> violations = validator.validate(request);
         ConstraintViolation<CepRequest> violation = violations.iterator().next();
 
-
         assertAll(
                 () -> assertEquals(3, violations.size()),
                 () -> assertEquals("cep", violation.getPropertyPath().toString())
         );
-
-
     }
 }

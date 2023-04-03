@@ -25,7 +25,7 @@ public class JsonToObject {
 
     public static String entityToString(Object object) {
         ObjectMapper mapper = new ObjectMapper();
-        String response = null;
+        String response;
 
         try {
             response = mapper.writeValueAsString(object);
