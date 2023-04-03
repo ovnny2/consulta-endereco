@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # consulta-endereco
 Destinado à criação de uma API REST visando o processo seletivo de backend Java na Wipro (Bradesco)
 =======
@@ -31,4 +30,3 @@ Pra ver se o container está de pé
 ## Proposta do desafio
 
 ![desafio.png](src/main/resources/static/desafio.png)
->>>>>>> 3bf720dab947992fd4f9a80f1233426132e63185
